@@ -5,7 +5,7 @@
 #' @param y Expression data frame the model was run on. Default is NULL. See 
 #'   Details for further description.
 #' @param data.type Type of data being analyzed ("rnaseq", "microarray", "flow", 
-#'   "metab"). Default is data.type="microarray".
+#'   "metab"). Default is data.type="rnaseq".
 #' @param method string denoting modeling method used ("limma","deseq2","edgeR")
 #' @param object results object generated from \code{\link[limma]{eBayes}} 
 #'   (limma), \code{\link[DESeq2]{results}} (DESeq2), 
@@ -102,7 +102,6 @@
 #' model.results <- genModelResults(y = dat, data.type = "microarray", object = fit2,
 #'                                  lm.Fit = fit, method = "limma")
 #' @import limma
-#' @import qusage
 #' @export
 genModelResults <- function (y = NULL, data.type = "rnaseq", method = "limma", 
                              object, lm.Fit = NULL, comp.names = NULL, 
